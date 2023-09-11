@@ -139,7 +139,7 @@
                 <div class="text-center">
                     <h1 class="font-estetik py-3" style="font-size: 2rem;">Waktu Menuju Acara</h1>
                     <div class="border rounded-pill shadow py-2 px-4 mx-2 mb-4">
-                        <div class="row justify-content-center" data-waktu="2023-10-01 10:00:00" id="tampilan-waktu">
+                        <div class="row justify-content-center" data-waktu="2023-10-07 15:00:00" id="tampilan-waktu">
                             <div class="col-3 p-1">
                                 <h2 class="d-inline m-0 p-0" id="hari">0</h2><small class="ms-1 me-0 my-0 p-0 d-inline">Hari</small>
                             </div>
@@ -162,22 +162,22 @@
 
                     <div class="overflow-x-hidden">
                         <div class="py-2" data-aos="fade-left" data-aos-duration="1500">
-                            <h1 class="font-estetik" style="font-size: 2rem;">Pemberkatan</h1>
-                            <p>Pukul 09.00 WIB - Selesai</p>
+                            <h1 class="font-estetik" style="font-size: 2rem;">Bubakan</h1>
+                            <p>Pukul 15.00 WIB - Selesai</p>
                         </div>
 
                         <div class="py-2" data-aos="fade-right" data-aos-duration="1500">
                             <h1 class="font-estetik" style="font-size: 2rem;">Resepsi</h1>
-                            <p>Pukul 11.00 WIB - Selesai</p>
+                            <p>Pukul 09.00 WIB - Selesai</p>
                         </div>
                     </div>
 
                     <div class="py-2" data-aos="fade-up" data-aos-duration="1500">
-                        <a href="https://goo.gl/maps/ALZR6FJZU3kxVwN86" target="_blank" class="btn btn-outline-light btn-sm rounded-pill shadow-sm mb-2 px-3">
+                        <a href="https://goo.gl/maps/nxv8LxQetBp97JVHA" target="_blank" class="btn btn-outline-light btn-sm rounded-pill shadow-sm mb-2 px-3">
                             <i class="fa-solid fa-map-location-dot me-2"></i>Lihat Google Maps
                         </a>
                         <p class="mb-0 mt-1 mx-1 pb-4" style="font-size: 0.9rem;">
-                            RT 2 RW 05, Kel. Jatimulyo, Kec. Lowokwaru, Kota Malang, Jawa Timur 65141
+                            Jl. Pesarean No 67 RT 06 RW 02. Pentukan Blimbing Ds. Dawu, Kec. paron, Kab. Ngawi, Jawatimur
                         </p>
                     </div>
                 </div>
