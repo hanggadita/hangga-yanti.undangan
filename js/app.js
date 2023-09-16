@@ -560,6 +560,8 @@ window.addEventListener('load', () => {
         div.innerHTML = `
         <p class="mt-0 mb-1 mx-0 p-0 text-light">Kepada Yth Bapak/Ibu/Saudara/i</p>
         <h2 class="text-light">${escapeHtml(name)}</h2>
+        <img src="/qr/${name}.png" alt="">
+        <p class="mt-0 mb-1 mx-0 p-0 text-light">${name}</p>
         `;
 
         document.getElementById('formnama').value = name;
