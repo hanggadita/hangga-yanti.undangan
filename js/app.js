@@ -27,18 +27,12 @@ const audio = (() => {
 })();
 
 const escapeHtml = (unsafe) => {
-    // return unsafe
-    //     .replace(/&/g, '&amp;')
-    //     .replace(/</g, '&lt;')
-    //     .replace(/>/g, '&gt;')
-    //     .replace(/"/g, '&quot;')
-    //     .replace(/'/g, '&#039;');
     return unsafe
-        .replace(/&/g, "&amp;")
-        .replace(/</g, "&lt;")
-        .replace(/>/g, "&gt;")
-        .replace(/"/g, "&quot;")
-        .replace(/'/g, "&#039;");
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#039;');
 };
 
 const salin = (btn) => {
