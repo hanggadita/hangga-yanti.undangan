@@ -550,26 +550,26 @@ const kirim = async () => {
 
 window.addEventListener('load', () => {
     let modal = new bootstrap.Modal('#exampleModal');
-    let name = (new URLSearchParams(window.location.search)).get('to') ?? '';
+    let originalName = (new URLSearchParams(window.location.search)).get('to') ?? '';
+    let encodedName = encodeURIComponent(originalName);
 
-    // Mengganti spasi ganda dengan tanda +
-    name = name.replace(/\s+/g/\s+/g, ' + ');
-
-    if (name.length == 0) {
+    if (encodedName.length == 0) {
         document.getElementById('namatamu').remove();
     } else {
         let div = document.createElement('div');
         div.classList.add('m-2');
         div.innerHTML = `
         <p class="mt-0 mb-1 mx-0 p-0 text-light">Kepada Yth Bapak/Ibu/Saudara/i</p>
-        <h2 class="text-light">${escapeHtml(name)}</h2>
-        <img src="/qr/${name}.png" style="max-width: 200px" alt="">
-        <p class="mt-0 mb-1 mx-0 p-0 text-light">${name}</p>
+        <h2 class="text-light">${escapeHtml(originalName)}</h2>
+        <img src="/qr/${encodedName}.png" style="max-width: 200px" alt="">
+        <p class="mt-0 mb-1 mx-0 p-0 text-light">${originalName}</p>
         `;
 
-        document.getElementById('formnama').value = name;
+        document.getElementById('formnama').value = originalName;
         document.getElementById('namatamu').appendChild(div);
     }
+
+    modal.show();
 
     modal.show();
 }, false);
