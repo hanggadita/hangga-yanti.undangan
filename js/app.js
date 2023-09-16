@@ -553,7 +553,7 @@ window.addEventListener('load', () => {
     let name = (new URLSearchParams(window.location.search)).get('to') ?? '';
 
     // Mengganti spasi ganda dengan tanda +
-    name = name.replace(/\s+/g, '+');
+    name = name.replace(/\s+/g/\s+/g, ' + ');
 
     if (name.length == 0) {
         document.getElementById('namatamu').remove();
