@@ -1,3 +1,8 @@
+window.addEventListener('load', function () {
+    var preloader = document.getElementById('preloader');
+    preloader.style.display = 'none'; // Sembunyikan preloader saat halaman selesai dimuat.
+});
+
 const audio = (() => {
     var instance = undefined;
 
