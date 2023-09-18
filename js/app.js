@@ -551,9 +551,6 @@ const kirim = async () => {
 window.addEventListener('load', () => {
     let modal = new bootstrap.Modal('#exampleModal');
     let name = (new URLSearchParams(window.location.search)).get('to') ?? '';
-    
-    // Mengganti tanda _ dengan +
-    name = name.replace(/_/g, '+');
 
     if (name.length == 0) {
         document.getElementById('namatamu').remove();
@@ -564,7 +561,6 @@ window.addEventListener('load', () => {
         <p class="mt-0 mb-1 mx-0 p-0 text-light">Kepada Yth Bapak/Ibu/Saudara/i</p>
         <h2 class="text-light">${escapeHtml(name)}</h2>
         <img src="/qr/${name}.png" style="max-width: 200px" alt="">
-        <p class="mt-0 mb-1 mx-0 p-0 text-light">${name}</p>
         `;
 
         document.getElementById('formnama').value = name;
