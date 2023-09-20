@@ -33,7 +33,7 @@ const audio = (() => {
 
 const escapeHtml = (unsafe) => {
     return unsafe
-        .replace(/&/g, '_')
+        .replace(/&/g, '&amp;')
         .replace(/</g, '&lt;')
         .replace(/>/g, '&gt;')
         .replace(/"/g, '&quot;')
@@ -555,8 +555,8 @@ const kirim = async () => {
 
 window.addEventListener('load', () => {
     let modal = new bootstrap.Modal('#exampleModal');
-    let nameParam = (new URLSearchParams(window.location.search)).get('to') ?? '';
-    let name = decodeURIComponent(nameParam); // Decode parameter
+    let name = (new URLSearchParams(window.location.search)).get('to') ?? '';
+    // let name = decodeURIComponent(nameParam); // Decode parameter
 
     if (name.length == 0) {
         document.getElementById('namatamu').remove();
@@ -566,8 +566,8 @@ window.addEventListener('load', () => {
         div.innerHTML = `
         <p class="mt-0 mb-1 mx-0 p-0 text-light">Kepada Yth Bapak/Ibu/Saudara/i</p>
         <h2 class="text-light">${escapeHtml(name)}</h2>
-        <img src="/imgqr/${encodeURIComponent(name)}.png" style="max-width: 200px" alt="">
-        <p class="mt-0 mb-1 mx-0 p-0 text-light">${escapeHtml(name)} | ${encodeURIComponent(name)}.png</p>
+        <img src="/imgqr/${escapeHtml(name)}.png" style="max-width: 200px" alt="">
+        <p class="mt-0 mb-1 mx-0 p-0 text-light">${escapeHtml(name)} | ${escapeHtml(name)}.png</p>
         `;
 
         document.getElementById('formnama').value = name;
