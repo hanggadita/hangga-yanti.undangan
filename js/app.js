@@ -556,7 +556,7 @@ const kirim = async () => {
 window.addEventListener('load', () => {
     let modal = new bootstrap.Modal('#exampleModal');
     let name = (new URLSearchParams(window.location.search)).get('to') ?? '';
-    let name2 = name; // Inisialisasi variabel name2 dengan nilai awal name
+    let name2 = escapeHtml(name); // Inisialisasi variabel name2 dengan nilai awal name
 
     if (name.includes('&amp;')) {
         name2 = name.replace(/&amp;/g, '%26'); // Mengganti &amp; jika ditemukan
@@ -570,7 +570,7 @@ window.addEventListener('load', () => {
         div.innerHTML = `
         <p class="mt-0 mb-1 mx-0 p-0 text-light">Kepada Yth Bapak/Ibu/Saudara/i</p>
         <h2 class="text-light">${escapeHtml(name)}</h2>
-        <img src="/imgqr/${name2}ashoy.png" style="max-width: 200px" alt="">
+        <img src="/imgqr/${name2}.png" style="max-width: 200px" alt="">
         `;
 
         document.getElementById('formnama').value = name;
