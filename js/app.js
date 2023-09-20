@@ -566,7 +566,7 @@ window.addEventListener('load', () => {
         div.innerHTML = `
         <p class="mt-0 mb-1 mx-0 p-0 text-light">Kepada Yth Bapak/Ibu/Saudara/i</p>
         <h2 class="text-light">${escapeHtml(name)}</h2>
-        <img src="/imgqr/${name}.png" style="max-width: 200px" alt="">
+        <img src="/imgqr/${encodeURIComponent(name)}.png" style="max-width: 200px" alt="">
         `;
 
         document.getElementById('formnama').value = name;
