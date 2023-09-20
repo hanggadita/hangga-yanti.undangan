@@ -556,18 +556,18 @@ const kirim = async () => {
 window.addEventListener('load', () => {
     let modal = new bootstrap.Modal('#exampleModal');
     let name = (new URLSearchParams(window.location.search)).get('to') ?? '';
-    let encodedName = encodeURIComponent(name); // Encode name for use in URL
 
     if (name.length == 0) {
         document.getElementById('namatamu').remove();
     } else {
-        alert(decodeURIComponent(encodedName)); // Alert the decoded name
         let div = document.createElement('div');
         div.classList.add('m-2');
         div.innerHTML = `
         <p class="mt-0 mb-1 mx-0 p-0 text-light">Kepada Yth Bapak/Ibu/Saudara/i</p>
         <h2 class="text-light">${escapeHtml(name)}</h2>
-        <img src="/imgqr/${encodedName}.png" style="max-width: 200px" alt="">`;
+        <img src="/imgqr/${nama}.png" style="max-width: 200px" alt="">
+        <p class="mt-0 mb-1 mx-0 p-0 text-light">${encodeURIComponent(name)}.png</p>
+        `;
 
         document.getElementById('formnama').value = name;
         document.getElementById('namatamu').appendChild(div);
