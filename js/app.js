@@ -555,8 +555,14 @@ const kirim = async () => {
 
 window.addEventListener('load', () => {
     let modal = new bootstrap.Modal('#exampleModal');
-    let name = (new URLSearchParams(window.location.search)).get('to') ?? '';
+    let searchParams = new URLSearchParams(window.location.search);
+    let name = searchParams.get('to') ?? '';
 
+    // Mengganti & menjadi %26 hanya jika ditemukan di parameter 'to'
+    if (name.includes('&')) {
+        name = name.replace(/&/g, '%26');
+    }
+    
     if (name.length == 0) {
         document.getElementById('namatamu').remove();
     } else {
